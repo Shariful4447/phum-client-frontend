@@ -1,22 +1,36 @@
-import { Layout, Menu } from "antd";
-import {
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
+import { Layout, Menu, MenuProps } from "antd";
+// import {
+//   UploadOutlined,
+//   UserOutlined,
+//   VideoCameraOutlined,
+// } from "@ant-design/icons";
 import { createElement } from "react";
 const { Header, Content, Footer, Sider } = Layout;
 
-const items = [
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-  UserOutlined,
-].map((icon, index) => ({
-  key: String(index + 1),
-  icon: createElement(icon),
-  label: `nav ${index + 1}`,
-}));
+const items: MenuProps["items"] = [
+  {
+    key: "abcdefg",
+    label: "Dashboard",
+  },
+  {
+    key: "abcdefge",
+    label: "Profile",
+  },
+  {
+    key: "abcdefgef",
+    label: "User Management",
+    children: [
+      {
+        key: "1",
+        label: "Create Admin",
+      },
+      {
+        key: "2",
+        label: "Create Student",
+      },
+    ],
+  },
+];
 
 const MainLayout = () => {
   return (
