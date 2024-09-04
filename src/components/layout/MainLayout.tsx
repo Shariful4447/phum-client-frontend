@@ -21,7 +21,7 @@ const items = [
 const MainLayout = () => {
   return (
     <div>
-      <Layout>
+      <Layout style={{ height: "100vh" }}>
         <Sider
           breakpoint="lg"
           collapsedWidth="0"
