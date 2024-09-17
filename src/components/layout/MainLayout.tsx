@@ -9,23 +9,23 @@ const { Header, Content, Footer, Sider } = Layout;
 
 const items: MenuProps["items"] = [
   {
-    key: "abcdefg",
+    key: "Dashboard",
     label: "Dashboard",
   },
   {
-    key: "abcdefge",
+    key: "Profile",
     label: "Profile",
   },
   {
-    key: "abcdefgef",
+    key: "User Management",
     label: "User Management",
     children: [
       {
-        key: "1",
+        key: "Create Admin",
         label: "Create Admin",
       },
       {
-        key: "2",
+        key: "Create Student",
         label: "Create Student",
       },
     ],
