@@ -1,5 +1,9 @@
 const CreateStudent = () => {
-  return <div></div>;
+  return (
+    <div>
+      <h2>Create student</h2>
+    </div>
+  );
 };
 
 export default CreateStudent;

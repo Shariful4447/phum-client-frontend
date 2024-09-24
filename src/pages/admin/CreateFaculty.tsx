@@ -1,5 +1,9 @@
 const CreateFaculty = () => {
-  return <div></div>;
+  return (
+    <div>
+      <h6>create faculty</h6>
+    </div>
+  );
 };
 
 export default CreateFaculty;
