@@ -3,8 +3,6 @@ import App from "../App";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import { adminRoutes } from "./admin.routes";
-import CreateFaculty from "../pages/admin/CreateFaculty";
-import CreateStudent from "../pages/admin/createStudent";
 
 const router = createBrowserRouter([
   {
