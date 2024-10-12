@@ -9,16 +9,7 @@ const MainLayout = () => {
   return (
     <div>
       <Layout style={{ height: "100vh" }}>
-        <Sider
-          breakpoint="lg"
-          collapsedWidth="0"
-          onBreakpoint={(broken) => {
-            console.log(broken);
-          }}
-          onCollapse={(collapsed, type) => {
-            console.log(collapsed, type);
-          }}
-        >
+        <Sider breakpoint="lg" collapsedWidth="0">
           <div
             style={{
               color: "white",
