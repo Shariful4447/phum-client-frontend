@@ -1,10 +1,21 @@
 import { Button } from "antd";
 import { useForm } from "react-hook-form";
+import { useLoginMutation } from "../redux/features/auth/authApi";
 
 const Login = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit } = useForm({
+    defaultValues: {
+      id: "A-0001",
+      password: "ami123457",
+    },
+  });
+  const [login, { data, error }] = useLoginMutation();
   const onSubmit = (data) => {
-    console.log(data);
+    const userInfo = {
+      id: data.id,
+      password: data.password,
+    };
+    login(userInfo);
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
