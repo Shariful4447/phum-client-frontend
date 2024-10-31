@@ -10,6 +10,9 @@ const Login = () => {
     },
   });
   const [login, { data, error }] = useLoginMutation();
+  console.log("data =>", data);
+  console.log("error =>", error);
+
   const onSubmit = (data) => {
     const userInfo = {
       id: data.id,
