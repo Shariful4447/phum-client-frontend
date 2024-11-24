@@ -19,7 +19,7 @@ const Login = () => {
   const [login, { error }] = useLoginMutation();
 
   const onSubmit = async (data) => {
-    toast.loading("Logging in...");
+    const toastId = toast.loading("Logging in...");
     try {
       const userInfo = {
         id: data.id,
@@ -30,10 +30,10 @@ const Login = () => {
       console.log(user);
 
       dispatch(setUser({ user: user, token: res.data.accessToken }));
-      toast.success("User logged in successfully");
+      toast.success("User logged in successfully", { id: toastId });
       navigate(`/${user.role}/dashboard`);
     } catch (error) {
-      toast.error("Something went wrong");
+      toast.error("Something went wrong", { id: toastId });
     }
   };
   return (
