@@ -19,7 +19,7 @@ const Login = () => {
   const [login] = useLoginMutation();
 
   const onSubmit = async (data: FieldValues) => {
-    const toastId = toast.loading("Logging in...");
+    const toastId = toast.loading("Logging in..."); // Move toastId outside the try block
     try {
       const userInfo = {
         id: data.id,
@@ -35,10 +35,11 @@ const Login = () => {
         duration: 2000,
       });
       navigate(`/${user.role}/dashboard`);
-    } catch (err) {
+    } catch {
       toast.error("Something went wrong", { id: toastId, duration: 2000 });
     }
   };
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div>
